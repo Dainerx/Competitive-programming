@@ -11,4 +11,4 @@ Key Map for acronymes:
   
   -TC=TopCoder;
 
-cout << "You are welcome!"
+cout << "You are welcome!";
