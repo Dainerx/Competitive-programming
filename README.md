@@ -7,15 +7,6 @@ Under this repository you'll find my most interesting solutions for popular comp
 * [CF](http://codeforces.com/) - CodeForces
 * [SP](http://www.spoj.com/) - SPOJ
 * [HR](https://www.hackerrank.com/) - HackerRank
-* [TC](https://www.topcoder.com/)
-
-  -CF=CodeForces;
-  
-  -SP=SPOJ;
-  
-  -HR=HackerRank;
-  
-  -TC=TopCoder;
-  
+* [TC](https://www.topcoder.com/) - Top Coder
   
 ## cout << "You are welcome!";
