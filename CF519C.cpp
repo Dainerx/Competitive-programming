@@ -26,7 +26,8 @@ using namespace std;
 unsigned int calc(unsigned int n, unsigned int m) {
     unsigned int counter = 0;
 
-    while (n >= 1 && m >= 2 || n >= 2 && m >= 1) {
+    while (n >= 1 && m >= 2 || n >= 2 && m >= 1) { //While I have not exhausted all my ressources keep going.
+        //Greedy perspective of picking which side I'm opting for
         if (n > m) {
             n-= 2;
             m--;
@@ -36,7 +37,7 @@ unsigned int calc(unsigned int n, unsigned int m) {
             m-=2;
             counter++;
 
-        } else {
+        } else { //Since they share the same order of importance we go with what so ever.
             n--;
             m -= 2;
             counter++;
