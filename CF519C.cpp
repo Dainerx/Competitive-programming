@@ -47,7 +47,7 @@ unsigned int calc(unsigned int n, unsigned int m) {
 }
 
 int main() {
-
+    //signed is better here
     unsigned int n, m;
     scanf("%i %i", &n, &m);
     cout << calc(n, m);
