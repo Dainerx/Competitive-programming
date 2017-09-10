@@ -19,9 +19,9 @@ public class Main {
         if (n==1)
             return BigInteger.ONE;
             
-        if (memo.containsKey(n)) {
+        if (memo.containsKey(n))
             return memo.get(n);
-        }
+            
         memo.put(n, fib(n - 2).add(fib(n - 1)));
     return fib(n - 2).add(fib(n - 1));
 }
