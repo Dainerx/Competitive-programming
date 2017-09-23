@@ -57,34 +57,34 @@ void extendedEuclid(ll a, ll b) {
 int main() {
 
     int n, c1, c2, n1, n2;
-    while (scanf("%d", &n) && n) {
-        scanf("%d %d", &c1, &n1);
-        scanf("%d %d", &c2, &n2);
-        
+    while (cin >> n && n) {
+        cin >> c1 >> n1;
+        cin >> c2 >> n2;
+
         extendedEuclid(n1, n2);
-        bool fail = false;
+        bool failed = false;
         
-        if (n % d) fail = true;
-        
+        if (n % d) 
+            failed = true;
         else {
-            
             x *= (n / d);
             y *= (n / d);
-            ll a = n2 / d;
-            ll b = n1 / d;
-            ll lf = (ll) ceil(-x / (double) a), rg = (ll) floor(y / (double) b);
+            ll aDivider = n2 / d;
+            ll bDivider = n1 / d;
+            ll lowerBound = (ll) ceil(-x / (double) aDivider);
+            ll upperBound = (ll) floor(y / (double) bDivider);
 
-            if (lf > rg) fail = true;
-            
+            if (lowerBound > upperBound) failed = true;
+
             else {
-                if (c1 * (x + a * lf) + c2 * (y - b * lf) < c1 * (x + a * rg) + c2 * (y - b * rg))
-                    x += a * lf, y -= b * lf;
+                if (c1 * (x + aDivider * lowerBound) + c2 * (y - bDivider * lowerBound) < c1 * (x + aDivider * upperBound) + c2 * (y - bDivider * upperBound))
+                    x += aDivider * lowerBound, y -= bDivider * lowerBound;
                 else
-                    x += a * rg, y -= b * rg;
+                    x += aDivider * upperBound, y -= bDivider * upperBound;
             }
         }
-        
-        if (fail) puts("failed");
+
+        if (failed) puts("failed");
         else printf("%lld %lld\n", x, y);
     }
 }
