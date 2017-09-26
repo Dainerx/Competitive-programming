@@ -21,7 +21,7 @@ public class Solution {
                 c = c.multiply(BigInteger.valueOf(N + 1 - j));
                 c = c.divide(BigInteger.valueOf(j));
             }
-            System.out.println();
+            System.out.println(); // go back to line
         }
 
     }
