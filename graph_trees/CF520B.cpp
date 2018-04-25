@@ -1,3 +1,4 @@
+#BFS like without building the graph
 #include <algorithm>
 #include <vector>
 #include <iostream>
