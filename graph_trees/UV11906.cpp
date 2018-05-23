@@ -59,7 +59,6 @@ void dfs(int r, int c) {
     for (it = possible_moves.begin(); it != possible_moves.end(); ++it) {
         int xi = it->first;
         int yi = it->second;
-
         if (xi >= 0 && xi <= R - 1 && yi >= 0 && yi <= C - 1 && !water[xi][yi]) {
             ct++;
             if (!visited[xi][yi])
